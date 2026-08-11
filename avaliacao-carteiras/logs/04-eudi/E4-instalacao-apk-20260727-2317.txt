@@ -1,0 +1,55 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260727231704
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 38476
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é .\E4-instalacao-apk-20260727-2317.txt
+=== 1. VERIFICACAO DO APK (existe? tamanho? assinatura?) ===
+
+
+Name          : eudi-wallet.apk
+Tamanho_MB    : 363,21
+LastWriteTime : 27/07/2026 23:14:46
+
+
+
+=== 2. EMULADOR CONECTADO? ===
+List of devices attached
+emulator-5554	device
+
+=== 3. INSTALACAO DO APK (cronometrada) ===
+Performing Streamed Install
+Success
+Tempo de instalacao (s): 4.5
+=== 4. CONFIRMAR QUE O APP FOI INSTALADO (achar o pacote) ===
+--- Procurando pacotes 'eudi'/'europa' instalados ---
+
+package:eu.europa.ec.euidi
+package:com.android.systemui.plugin.globalactions.wallet
+
+
+=== 5. DETALHES DO PACOTE INSTALADO (versao, etc.) ===
+Pacote identificado: eu.europa.ec.euidi
+
+    versionCode=39 minSdk=29 targetSdk=37
+    versionName=2026.07.39
+      firstInstallTime=2026-07-28 02:17:07
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260727231709
+**********************

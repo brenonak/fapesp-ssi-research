@@ -1,0 +1,53 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260731134255
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 47644
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é .\B6-node-portatil-20260731-1342.txt
+=== 1. LOCALIZAR O NODE PORTATIL ===
+Node portatil em: C:\IC-Wallets\node-v20.19.2-win-x64
+
+=== 2. INJETAR NO PATH *SO DESTA SESSAO* (prepend) ===
+PATH ajustado (node 20 tem prioridade nesta janela).
+
+=== 3. CONFIRMAR QUE 'node' AGORA E O 20.19.2 ===
+v20.19.2
+Origem do node ativo:
+C:\IC-Wallets\node-v20.19.2-win-x64\node.exe
+
+=== 4. npm QUE VEIO COM O NODE 20 ===
+10.8.2
+
+=== 5. HABILITAR COREPACK (para o Yarn 4.9.2 que a Bifold exige) ===
+Corepack habilitado (fornecera o Yarn 4.9.2 automaticamente na pasta do projeto).
+
+=== 6. VALIDACAO CRUZADA: as outras ferramentas continuam OK nesta sessao? ===
+java:
+java : openjdk version "17.0.20" 2026-07-21 LTS
+No linha:38 caractere:21
++ Write-Host "java:"; java -version 2>&1 | Select-Object -First 1
++                     ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (openjdk version "17.0.20" 2026-07-21 LTS:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+JAVA_HOME: C:\Program Files\Microsoft\jdk-17.0.20.8-hotspot
+ANDROID_HOME: C:\Users\breno\AppData\Local\Android\Sdk
+adb:
+Android Debug Bridge version 1.0.41
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260731134257
+**********************

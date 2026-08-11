@@ -1,0 +1,141 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260731132751
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 12924
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é C:\IC-Wallets\logs\05-bifold\B4-instrucoes-build-20260731-1327.txt
+=== 1. O QUE TEM EM packages/ E samples/ ===
+--- packages/ (as bibliotecas) ---
+
+Name
+----
+core
+oca
+react-hooks
+react-native-attestation
+remote-logs
+verifier
+
+
+--- samples/ (onde deve estar o app compilavel) ---
+
+Name
+----
+app
+
+
+=== 2. PROCURAR APPS COM PROJETO ANDROID (pasta android/ = compilavel para APK) ===
+
+FullName
+--------
+C:\IC-Wallets\bifold-wallet\samples\app\android
+
+
+--- (alternativa) procurar todos os package.json com script 'android' ---
+APP: C:\IC-Wallets\bifold-wallet\samples\app\package.json  (script android: react-native run-android --active-arch-only)
+=== 3. NODE VERSION REQUERIDA (.nvmrc e .tool-versions) ===
+.nvmrc: 20.19.2
+.tool-versions:
+  nodejs 20.19.2
+  python 3.11.2
+  java zulu-17.56.15
+  yarn 4.9.2
+  ruby 3.3.6
+=== 4. PRIMEIRAS ~80 LINHAS DO README PRINCIPAL (instrucoes de setup) ===
+# Bifold README.md
+
+# Summary
+
+The Bifold Wallet is an open-source project designed to enhance the way we interact with digital identities, making the process both secure and user-friendly. It is based on React Native, which lets it run smoothly on different devices and platforms, such as iOS, and Android. It is a leading example of digital wallets, with a focus on making verifiable credentials (VCs) simple and convenient for everyone. Our mission is to create a collaborative community that enhances the way digital credentials are handled, making them accessible and straightforward for all.
+
+**Key Features and Benefits:**
+
+- **Unified Digital Identity Management:** Emphasizing security and user-friendliness, Bifold excels in consolidating and managing digital identities across various standards like AnonCreds and W3C VC Data Model. This capability positions Bifold as a pivotal resource for secure and private handling of digital identities, accessible to all.
+
+- **Seamless Use Across Popular Mobile Platforms:** Thanks to its React Native architecture, Bifold delivers a smooth experience on any iOS or Android device, enabling users to manage their digital identities whether they are using a phone or a tablet. This cross-platform flexibility means that developers can create applications once and deploy them on the mobile devices that the majority of people actually use, ensuring a consistent and accessible user experience.
+
+- **Community-Driven Development:** Bifold is more than a tool; it's a community initiative aimed at fostering collaboration and sharing innovations. By bringing together diverse groups, from organizations to individuals, Bifold encourages the pooling of resources and knowledge to facilitate the broader adoption and understanding of verifiable credentials.
+
+- **Widespread Adoption and Trust:** With a growing list of users around the globe, including governmental bodies in Canada and teams in Brazil, Bifold has proven its reliability and relevance. Its international use showcases the platform's adaptability to various needs and its role in advancing digital identity management on a global scale.
+
+- **Adaptability to Diverse Needs:** Bifold's design caters to a wide range of project types and complexities, offering tailored solutions for managing digital identities. This adaptability ensures that users can streamline their processes related to verifiable credentials, improving efficiency and simplification in digital identity initiatives.
+
+# Current Status
+
+Currently, we're updating Bifold's architecture to make it easier to maintain and customize for various use cases. Check out our [design roadmap issue](https://github.com/openwallet-foundation/bifold-wallet/issues/754) for more information, and we welcome your feedback.
+
+## Contributing
+
+We warmly welcome contributions to the Bifold project! If you're interested in joining our community, please start by reading our [Contributor's Guide][contributor-guide].
+
+## Community
+
+Joining the Bifold community on OpenWallet Foundation Discord is a breeze:
+
+1. Head to https://discord.gg/openwalletfoundation
+2. Click on 'Accept the invite'
+3. Dive into the various channels!
+
+`#bifold` is our main discussion channel for everything Bifold wallet related. And since Bifold uses Credo (formerly Aries Framework Javascript) extensively, you might also want to join the `#credo` channel for deeper technical conversations. We can't wait to see you there!
+
+Additionally, we hold a bi-weekly user group meeting. You can find the updated schedule, past agendas, and meeting recordings on this [wiki page](https://wiki.openwallet.foundation/display/BIFOLD/).
+
+Please note, being part of the OpenWallet Foundation, we expect all interactions to adhere to the [Antitrust Policy](https://wiki.hyperledger.org/download/attachments/29034696/Antitrustnotice.png?version=1&modificationDate=1581695654000&api=v2) and [Code of Conduct][code-of-conduct].
+
+# Developers Guide
+
+The following document is intended to help developers get started with the Bifold project. It includes information on how to set up your development environment, build the project, and run the app in an emulator.
+
+## Project Overview
+
+The Bifold Wallet is a user-friendly mobile agent that is built with React Native and uses Credo to exchange verifiable credentials with other agents. While Credo handles the heavy lifting of verifiable credential work, Bifold focuses on user experience and interactions with these credentials.
+
+Key points to note:
+
+- Bifold uses the OWF Credo-ts library, which in turn uses Rust libraries.
+- Credo provides the digital credential domain specific layer for Bifold - [features](https://github.com/openwallet-foundation/credo-ts#features)
+- Bifold relies on a mediator for DIDComm protocols because mobile devices don't have a fixed IP address and often don't accept inbound network connections. The mediator, a service that runs on a server with a fixed IP address, relays messages between an agent and Bifold. The mediator is configured within the Bifold app. A mediator is not required for OID4VCI flows.
+
+### Supported Specifications
+
+- **Protocols:** DIF DIDComm v1 (AIP 2), OIDF OID4VCI (pre-authorized code flow) and OID4VP 1.0, ISO 18013-7 Annex B
+- **Credential Formats:** Hyperledger Anoncreds, IETF SD-JWT, ISO/IEC 18013-5 mDOC, W3C VCDM 1.1/2.0 JWT/SD-JWT
+- **DID Methods:** did:indy, did:web, did:key, did:jwk, did:peer and did:webvh
+- **Credential Status:** Hperledger Anoncreds Accumulator, IETF Token Status List, W3C Bitstring Status List 1.0
+- **Request and Query Languages:** DIF Presentation Exchange (PEX) and DCQL (OID4VP 1.0)
+
+### Registering DID Method Resolvers
+
+When creating a themed wallet based on Bifold, you need to explicitly register DID method resolvers in your agent configuration. While Credo core provides resolvers for several DID methods (such as `did:web`, `did:key`, `did:jwk`, and `did:peer`), they must be explicitly registered in the `DidsModule` configuration. Any additional DID methods from other Credo packages (such as `did:webvh`) must also be explicitly registered.
+
+This configuration is done in the `getAgentModules` function, typically located in `packages/core/src/utils/agent.ts`:
+
+```typescript
+dids: new DidsModule({
+  resolvers: [
+    new WebvhDidResolver(),  // From @credo-ts/webvh package
+    new WebDidResolver(),     // Core resolver
+    new JwkDidResolver(),     // Core resolver
+    new KeyDidResolver(),     // Core resolver
+    new PeerDidResolver(),    // Core resolver
+  ],
+}),
+```
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260731132751
+**********************

@@ -1,0 +1,234 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260724222504
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 24604
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é .\B6c-inventario-final-20260724-2225.txt
+
+==================================================================
+SERVICO: ISSUER (Emissor)  (localhost:7002/api.json)
+==================================================================
+Titulo: walt.id issuer | Versao: 0.22.0
+TOTAL DE ENDPOINTS (funcionalidades expostas): 28
+
+--- FUNCIONALIDADES AGRUPADAS POR CATEGORIA ---
+
+  [(sem categoria)]  (1 endpoints)
+     GET    /livez
+
+  [Credential Issuance]  (6 endpoints)
+     POST   /raw/jwt/sign
+     POST   /openid4vc/jwt/issue
+     POST   /openid4vc/jwt/issueBatch
+     POST   /openid4vc/sdjwt/issue
+     POST   /openid4vc/sdjwt/issueBatch
+     POST   /openid4vc/mdoc/issue
+
+  [Feature management]  (2 endpoints)
+     GET    /features/registered
+     GET    /features/state
+
+  [oidc]  (16 endpoints)
+     GET    /{standardVersion}/.well-known/openid-configuration
+     GET    /{standardVersion}/.well-known/openid-credential-issuer
+     GET    /{standardVersion}/.well-known/oauth-authorization-server
+     GET    /.well-known/jwt-vc-issuer/{standardVersion}
+     GET    /.well-known/vct/{standardVersion}/{type}
+     POST   /{standardVersion}/par
+     GET    /{standardVersion}/jwks
+     GET    /{standardVersion}/authorize
+     POST   /{standardVersion}/direct_post
+     POST   /{standardVersion}/token
+     GET    /{standardVersion}/credentialOffer
+     POST   /{standardVersion}/credential
+     POST   /{standardVersion}/credential_deferred
+     POST   /{standardVersion}/batch_credential
+     GET    /external_login/{internalAuthReq}
+     GET    /callback
+
+  [Onboarding Service]  (3 endpoints)
+     POST   /onboard/iso-mdl/iacas
+     POST   /onboard/iso-mdl/document-signers
+     POST   /onboard/issuer
+
+(Spec JSON salva como anexo)
+
+==================================================================
+SERVICO: VERIFIER (Verificador)  (localhost:7003/api.json)
+==================================================================
+Titulo: walt.id verifier | Versao: 0.22.0
+TOTAL DE ENDPOINTS (funcionalidades expostas): 13
+
+--- FUNCIONALIDADES AGRUPADAS POR CATEGORIA ---
+
+  [(sem categoria)]  (1 endpoints)
+     GET    /livez
+
+  [Credential Verification]  (4 endpoints)
+     POST   /openid4vc/verify
+     GET    /openid4vc/session/{id}
+     GET    /openid4vc/session/{id}/presented-credentials
+     GET    /openid4vc/policy-list
+
+  [Ebsi]  (3 endpoints)
+     GET    /.well-known/openid-configuration
+     GET    /jwks
+     GET    /authorize
+
+  [Feature management]  (2 endpoints)
+     GET    /features/registered
+     GET    /features/state
+
+  [OIDC]  (3 endpoints)
+     POST   /openid4vc/verify/{state}
+     GET    /openid4vc/pd/{id}
+     GET    /openid4vc/request/{id}
+
+(Spec JSON salva como anexo)
+
+==================================================================
+SERVICO: WALLET (Carteira)  (localhost:7001/api.json)
+==================================================================
+Titulo: walt.id wallet | Versao: 0.22.0
+TOTAL DE ENDPOINTS (funcionalidades expostas): 77
+
+--- FUNCIONALIDADES AGRUPADAS POR CATEGORIA ---
+
+  [(sem categoria)]  (1 endpoints)
+     GET    /livez
+
+  [Accounts]  (1 endpoints)
+     GET    /wallet-api/wallet/accounts/wallets
+
+  [Authentication]  (5 endpoints)
+     GET    /wallet-api/auth/user-info
+     GET    /wallet-api/auth/session
+     POST   /wallet-api/auth/register
+     POST   /wallet-api/auth/login
+     POST   /wallet-api/auth/logout
+
+  [Credential exchange]  (9 endpoints)
+     POST   /wallet-api/wallet/{wallet}/exchange/useOfferRequest
+     POST   /wallet-api/wallet/{wallet}/exchange/matchCredentialsForPresentationDefinition
+     POST   /wallet-api/wallet/{wallet}/exchange/matchCredentialsForPresentationRequest
+     POST   /wallet-api/wallet/{wallet}/exchange/unmatchedCredentialsForPresentationDefinition
+     POST   /wallet-api/wallet/{wallet}/exchange/usePresentationRequest
+     POST   /wallet-api/wallet/{wallet}/exchange/resolvePresentationRequest
+     POST   /wallet-api/wallet/{wallet}/exchange/resolveCredentialOffer
+     GET    /wallet-api/wallet/{wallet}/exchange/resolveVctUrl
+     GET    /wallet-api/wallet/{wallet}/exchange/resolveIssuerOpenIDMetadata
+
+  [DID Web Registry]  (2 endpoints)
+     GET    /wallet-api/registry
+     GET    /wallet-api/registry/{id}/did.json
+
+  [DIDs]  (11 endpoints)
+     GET    /wallet-api/wallet/{wallet}/dids
+     GET    /wallet-api/wallet/{wallet}/dids/{did}
+     DELETE /wallet-api/wallet/{wallet}/dids/{did}
+     POST   /wallet-api/wallet/{wallet}/dids/default
+     POST   /wallet-api/wallet/{wallet}/dids/create/key
+     POST   /wallet-api/wallet/{wallet}/dids/create/jwk
+     POST   /wallet-api/wallet/{wallet}/dids/create/web
+     POST   /wallet-api/wallet/{wallet}/dids/create/ebsi
+     POST   /wallet-api/wallet/{wallet}/dids/create/cheqd
+     POST   /wallet-api/wallet/{wallet}/dids/create/iota
+     POST   /wallet-api/wallet/{wallet}/dids/import
+
+  [Event Log]  (2 endpoints)
+     GET    /wallet-api/wallet/{wallet}/eventlog
+     DELETE /wallet-api/wallet/{wallet}/eventlog/{id}
+
+  [Feature management]  (2 endpoints)
+     GET    /features/registered
+     GET    /features/state
+
+  [History]  (1 endpoints)
+     GET    /wallet-api/wallet/{wallet}/history
+
+  [Issuers]  (5 endpoints)
+     GET    /wallet-api/wallet/{wallet}/issuers
+     POST   /wallet-api/wallet/{wallet}/issuers/add
+     GET    /wallet-api/wallet/{wallet}/issuers/{issuer}
+     PUT    /wallet-api/wallet/{wallet}/issuers/{issuer}/authorize
+     GET    /wallet-api/wallet/{wallet}/issuers/{issuer}/credentials
+
+  [Keycloak Authentication]  (4 endpoints)
+     GET    /wallet-api/auth/keycloak/token
+     POST   /wallet-api/auth/keycloak/login
+     POST   /wallet-api/auth/keycloak/create
+     POST   /wallet-api/auth/keycloak/logout
+
+  [Keys]  (10 endpoints)
+     GET    /wallet-api/wallet/{wallet}/keys
+     POST   /wallet-api/wallet/{wallet}/keys/generate
+     POST   /wallet-api/wallet/{wallet}/keys/import
+     POST   /wallet-api/wallet/{wallet}/keys/verify
+     GET    /wallet-api/wallet/{wallet}/keys/{keyId}/load
+     GET    /wallet-api/wallet/{wallet}/keys/{keyId}/meta
+     GET    /wallet-api/wallet/{wallet}/keys/{keyId}/export
+     DELETE /wallet-api/wallet/{wallet}/keys/{keyId}
+     DELETE /wallet-api/wallet/{wallet}/keys/{keyId}/remove
+     POST   /wallet-api/wallet/{wallet}/keys/{keyId}/sign
+
+  [Settings]  (2 endpoints)
+     GET    /wallet-api/wallet/{wallet}/settings
+     POST   /wallet-api/wallet/{wallet}/settings
+
+  [Transaction Data]  (1 endpoints)
+     GET    /wallet-api/transaction-data-profiles
+
+  [Utilities]  (1 endpoints)
+     POST   /wallet-api/util/parseMDoc
+
+  [WalletCategories]  (4 endpoints)
+     GET    /wallet-api/wallet/{wallet}/categories
+     POST   /wallet-api/wallet/{wallet}/categories/{name}/add
+     DELETE /wallet-api/wallet/{wallet}/categories/{name}
+     PUT    /wallet-api/wallet/{wallet}/categories/{name}/rename/{newName}
+
+  [WalletCredential manifest]  (4 endpoints)
+     GET    /wallet-api/wallet/{wallet}/manifest/{credentialId}
+     GET    /wallet-api/wallet/{wallet}/manifest/{credentialId}/display
+     GET    /wallet-api/wallet/{wallet}/manifest/{credentialId}/issuer
+     GET    /wallet-api/wallet/{wallet}/manifest/extract
+
+  [WalletCredentials]  (11 endpoints)
+     GET    /wallet-api/wallet/{wallet}/credentials
+     PUT    /wallet-api/wallet/{wallet}/credentials
+     POST   /wallet-api/wallet/{wallet}/credentials/import
+     GET    /wallet-api/wallet/{wallet}/credentials/{credentialId}
+     DELETE /wallet-api/wallet/{wallet}/credentials/{credentialId}
+     POST   /wallet-api/wallet/{wallet}/credentials/{credentialId}/restore
+     POST   /wallet-api/wallet/{wallet}/credentials/{credentialId}/accept
+     POST   /wallet-api/wallet/{wallet}/credentials/{credentialId}/reject
+     GET    /wallet-api/wallet/{wallet}/credentials/{credentialId}/status
+     PUT    /wallet-api/wallet/{wallet}/credentials/{credentialId}/category
+     DELETE /wallet-api/wallet/{wallet}/credentials/{credentialId}/category
+
+  [WalletReports]  (1 endpoints)
+     GET    /wallet-api/wallet/{wallet}/reports/frequent/credentials
+
+(Spec JSON salva como anexo)
+
+=== RESUMO: contagem de funcionalidades por servico ===
+ISSUER (Emissor)          28 funcionalidades
+VERIFIER (Verificador)    13 funcionalidades
+WALLET (Carteira)         77 funcionalidades
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260724222505
+**********************

@@ -1,0 +1,31 @@
+{
+  "system_status": "active",
+  "blocked_pilots": [
+    "did:example:pilot-suspended-01",
+    "did:example:pilot-bad-behavior"
+  ],
+  "required_certs": [
+    "COMMERCIAL_PILOT",
+    "NIGHT_FLIGHT",
+    "URBAN_AIR_MOBILITY_V1"
+  ],
+  "weather_limits": {
+    "Heavy-Lift": {
+      "max_wind": 60,
+      "min_visibility": 200
+    },
+    "Light-Sport": {
+      "max_wind": 30,
+      "min_visibility": 800
+    },
+    "Passenger": {
+      "max_wind": 45,
+      "min_visibility": 500
+    }
+  },
+  "aircraft_database": {
+    "FutureFlyer-X1": "Passenger",
+    "CargoDrone-Z9": "Heavy-Lift",
+    "TinyBee-S2": "Light-Sport"
+  }
+}

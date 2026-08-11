@@ -1,0 +1,59 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260731135524
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 3000
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é .\B6b-reinjetar-node20-20260731-1355.txt
+=== 1. REINJETAR NODE 20 PORTATIL NO PATH DESTA SESSAO ===
+Node 20 reinjetado no PATH desta janela.
+
+=== 2. CONFIRMAR NODE 20 ATIVO ===
+v20.19.2
+Origem: C:\IC-Wallets\node-v20.19.2-win-x64\node.exe
+
+=== 3. CONFIRMAR TOOLCHAIN COMPLETA (persistiu ao reinicio?) ===
+--- java (deve ser 17) ---
+java : openjdk version "17.0.20" 2026-07-21 LTS
+No linha:19 caractere:1
++ java -version 2>&1 | Select-Object -First 1
++ ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (openjdk version "17.0.20" 2026-07-21 LTS:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+JAVA_HOME: C:\Program Files\Microsoft\jdk-17.0.20.8-hotspot
+ANDROID_HOME: C:\Users\breno\AppData\Local\Android\Sdk
+--- adb ---
+Android Debug Bridge version 1.0.41
+
+=== 4. RE-HABILITAR COREPACK (para o Yarn 4.9.2) ===
+
+=== 5. REPOSITORIO BIFOLD INTACTO? ===
+OK - samples/app/package.json presente.
+
+=== 6. yarn install JA FOI RODADO ANTES DO TRAVAMENTO? (node_modules existe?) ===
+node_modules ausente - yarn install ainda nao rodou (esperado). Seguiremos com o BIF-7.
+
+=== 7. RAM LIVRE (baseline apos reinicio) ===
+
+
+RAM_Livre_MB : 20646
+
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260731135525
+**********************

@@ -1,0 +1,240 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260724213107
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 24604
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é .\B4-frontend-fingerprint-20260724-2131.txt
+
+==================================================================
+ALVO: Web-Wallet (frontend)  ->  http://localhost:7101/
+==================================================================
+--- STATUS ---
+HTTP 200 OK
+--- HEADERS (impressao digital do servidor) ---
+Content-Length: 7108
+Content-Type: text/html;charset=utf-8
+Date: Sat, 25 Jul 2026 00:30:45 GMT
+Via: 1.1 Caddy
+X-Powered-By: Nuxt
+--- TAMANHO DO HTML INICIAL (bytes) ---
+7108
+--- PRIMEIROS 1500 CHARS DO HTML (ver SSR vs SPA) ---
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="importmap">{"imports":{"#entry":"/_nuxt/B_L-qJx6.js"}}</script>
+<link rel="stylesheet" href="/_nuxt/entry.CouV_bZN.css" crossorigin>
+<link rel="modulepreload" as="script" crossorigin href="/_nuxt/B_L-qJx6.js">
+<script type="module" src="/_nuxt/B_L-qJx6.js" crossorigin></script>
+<link rel="prefetch" as="style" crossorigin href="/_nuxt/default-reduced-nav.CYHmmsTS.css">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/CEUiZgyw.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/C2jDcOm9.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/CWjYKyAB.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/DUGfsfFK.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/CkesL9Qe.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/Bi1k3yto.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/eYzvWCrY.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/BmpekI85.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/B-g_KXp7.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/DeRGmaAB.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/DRPpOQwM.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/BcsM5QpX.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/Dqhp8DBc.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/BY
+
+--- ASSETS JS/CSS REFERENCIADOS (stack pistas) ---
+Scripts JS:
+  /_nuxt/B_L-qJx6.js
+Estilos CSS:
+  /_nuxt/entry.CouV_bZN.css
+  /_nuxt/default-reduced-nav.CYHmmsTS.css
+  /_nuxt/desktop.KtsHKrT2.css
+  /_nuxt/minimal.BS6KPfrE.css
+  /_nuxt/error-404.B5BLpOJQ.css
+  /_nuxt/error-500.Dk6Xuhip.css
+
+--- MARCADORES DE FRAMEWORK NO HTML ---
+  MUI (mui / MuiButton)                  -
+  Vite (/@vite / type=module)            PRESENTE
+  React (data-reactroot/id=root)         -
+  Vue (data-v- / id=app)                 -
+  Tailwind (utility classes)             -
+  Nuxt (__nuxt / _nuxt/)                 PRESENTE
+  Next.js (__next / _next/)              -
+  SvelteKit (__sveltekit)                -
+
+==================================================================
+ALVO: Web-Portal (issuer/verifier)  ->  http://localhost:7102/
+==================================================================
+--- STATUS ---
+HTTP 200 OK
+--- HEADERS (impressao digital do servidor) ---
+Vary: Accept-Encoding
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=utf-8
+Date: Sat, 25 Jul 2026 00:30:45 GMT
+ETag: "122781w290o2jm"
+Via: 1.1 Caddy
+X-Powered-By: Next.js
+--- TAMANHO DO HTML INICIAL (bytes) ---
+3299
+--- PRIMEIROS 1500 CHARS DO HTML (ver SSR vs SPA) ---
+<!DOCTYPE html><html lang="en" class="bg-gray-50"><head><meta charSet="utf-8" data-next-head=""/><meta name="viewport" content="width=device-width" data-next-head=""/><link rel="preload" href="/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-next-font="size-adjust"/><link rel="preload" href="/_next/static/chunks/02q.o_~nrqirz.css" as="style"/><link rel="stylesheet" href="/_next/static/chunks/02q.o_~nrqirz.css" data-n-g=""/><noscript data-n-css=""></noscript><script src="/_next/static/chunks/0rqf5oo4d1are.js" defer=""></script><script src="/_next/static/chunks/00ln~fz-s_27q.js" defer=""></script><script src="/_next/static/chunks/04jvmdom.ochn.js" defer=""></script><script src="/_next/static/chunks/0jqfo_b.2qmu_.js" defer=""></script><script src="/_next/static/chunks/turbopack-0b~w5iu31uavj.js" defer=""></script><script src="/_next/static/chunks/0pjp9tt_sjtnv.js" defer=""></script><script src="/_next/static/chunks/008ei2po_vvrf.js" defer=""></script><script src="/_next/static/chunks/0z3zhhu9wl8o-.js" defer=""></script><script src="/_next/static/chunks/turbopack-08meaqs_y32rb.js" defer=""></script><script src="/_next/static/xfMcwVEh64WqDxQt6BBqy/_buildManifest.js" defer=""></script><script src="/_next/static/xfMcwVEh64WqDxQt6BBqy/_ssgManifest.js" defer=""></script><script src="/_next/static/xfMcwVEh64WqDxQt6BBqy/_clientMiddlewareManifest.js" defer=""></script></head><body><div id="__next"><div><div class="flex
+
+--- ASSETS JS/CSS REFERENCIADOS (stack pistas) ---
+Scripts JS:
+  /_next/static/chunks/0rqf5oo4d1are.js
+  /_next/static/chunks/00ln~fz-s_27q.js
+  /_next/static/chunks/04jvmdom.ochn.js
+  /_next/static/chunks/0jqfo_b.2qmu_.js
+  /_next/static/chunks/turbopack-0b~w5iu31uavj.js
+  /_next/static/chunks/0pjp9tt_sjtnv.js
+  /_next/static/chunks/008ei2po_vvrf.js
+  /_next/static/chunks/0z3zhhu9wl8o-.js
+  /_next/static/chunks/turbopack-08meaqs_y32rb.js
+  /_next/static/xfMcwVEh64WqDxQt6BBqy/_buildManifest.js
+  /_next/static/xfMcwVEh64WqDxQt6BBqy/_ssgManifest.js
+  /_next/static/xfMcwVEh64WqDxQt6BBqy/_clientMiddlewareManifest.js
+Estilos CSS:
+  /_next/static/chunks/02q.o_~nrqirz.css
+  /_next/static/chunks/02q.o_~nrqirz.css
+
+--- MARCADORES DE FRAMEWORK NO HTML ---
+  MUI (mui / MuiButton)                  -
+  Vite (/@vite / type=module)            -
+  React (data-reactroot/id=root)         -
+  Vue (data-v- / id=app)                 -
+  Tailwind (utility classes)             PRESENTE
+  Nuxt (__nuxt / _nuxt/)                 -
+  Next.js (__next / _next/)              PRESENTE
+  SvelteKit (__sveltekit)                -
+
+==================================================================
+ALVO: dev-wallet  ->  http://localhost:7104/
+==================================================================
+--- STATUS ---
+HTTP 200 OK
+--- HEADERS (impressao digital do servidor) ---
+Content-Length: 7389
+Content-Type: text/html;charset=utf-8
+Date: Sat, 25 Jul 2026 00:30:45 GMT
+Via: 1.1 Caddy
+X-Powered-By: Nuxt
+--- TAMANHO DO HTML INICIAL (bytes) ---
+7389
+--- PRIMEIROS 1500 CHARS DO HTML (ver SSR vs SPA) ---
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="importmap">{"imports":{"#entry":"/_nuxt/Bn_jGGF0.js"}}</script>
+<link rel="stylesheet" href="/_nuxt/entry.BReoQEEa.css" crossorigin>
+<link rel="modulepreload" as="script" crossorigin href="/_nuxt/Bn_jGGF0.js">
+<script type="module" src="/_nuxt/Bn_jGGF0.js" crossorigin></script>
+<link rel="prefetch" as="style" crossorigin href="/_nuxt/default-reduced-nav.DfqV0qIx.css">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/DX-JzYQY.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/BTW0aW9k.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/IEF8XE-w.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/D77GNzQ1.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/DtlmBwzH.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/CC5DSxRz.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/BjulAMIe.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/Cwg9SuOh.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/ZijP63j9.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/CHS0fPHa.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/Fe7LJSLl.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/Bcw8x4oW.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/C058djao.js">
+<link rel="prefetch" as="script" crossorigin href="/_nuxt/DM
+
+--- ASSETS JS/CSS REFERENCIADOS (stack pistas) ---
+Scripts JS:
+  /_nuxt/Bn_jGGF0.js
+Estilos CSS:
+  /_nuxt/entry.BReoQEEa.css
+  /_nuxt/default-reduced-nav.DfqV0qIx.css
+  /_nuxt/minimal.BS6KPfrE.css
+  /_nuxt/error-404.B5BLpOJQ.css
+  /_nuxt/error-500.Dk6Xuhip.css
+
+--- MARCADORES DE FRAMEWORK NO HTML ---
+  MUI (mui / MuiButton)                  -
+  Vite (/@vite / type=module)            PRESENTE
+  React (data-reactroot/id=root)         -
+  Vue (data-v- / id=app)                 -
+  Tailwind (utility classes)             -
+  Nuxt (__nuxt / _nuxt/)                 PRESENTE
+  Next.js (__next / _next/)              -
+  SvelteKit (__sveltekit)                -
+
+==================================================================
+ALVO: Wallet-API (referencia)  ->  http://localhost:7001/
+==================================================================
+--- STATUS ---
+HTTP 200 OK
+--- HEADERS (impressao digital do servidor) ---
+Vary: Origin,Accept-Encoding
+Transfer-Encoding: chunked
+Content-Type: text/html
+Date: Sat, 25 Jul 2026 00:30:45 GMT
+Via: 1.1 Caddy
+--- TAMANHO DO HTML INICIAL (bytes) ---
+734
+--- PRIMEIROS 1500 CHARS DO HTML (ver SSR vs SPA) ---
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Swagger UI</title>
+    <link rel="stylesheet" type="text/css" href="./swagger-ui.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+  </head>
+
+  <body>
+    <div id="swagger-ui"></div>
+    <script src="./swagger-ui-bundle.js" charset="UTF-8"> </script>
+    <script src="./swagger-ui-standalone-preset.js" charset="UTF-8"> </script>
+    <script src="./swagger-initializer.js" charset="UTF-8"> </script>
+  </body>
+</html>
+
+--- ASSETS JS/CSS REFERENCIADOS (stack pistas) ---
+Scripts JS:
+  ./swagger-ui-bundle.js
+  ./swagger-ui-standalone-preset.js
+  ./swagger-initializer.js
+Estilos CSS:
+  ./swagger-ui.css
+  index.css
+
+--- MARCADORES DE FRAMEWORK NO HTML ---
+  MUI (mui / MuiButton)                  -
+  Vite (/@vite / type=module)            -
+  React (data-reactroot/id=root)         -
+  Vue (data-v- / id=app)                 -
+  Tailwind (utility classes)             -
+  Nuxt (__nuxt / _nuxt/)                 -
+  Next.js (__next / _next/)              -
+  SvelteKit (__sveltekit)                -
+
+=== META: IMAGENS DOS FRONTENDS (runtime real por tras) ===
+/docker-compose-waltid-demo-wallet-1 => waltid/waltid-demo-wallet:stable | Entrypoint: [node server/index.mjs] | Cmd: []
+/docker-compose-web-portal-1 => waltid/portal:stable | Entrypoint: [docker-entrypoint.sh] | Cmd: [node server.js]
+/docker-compose-waltid-dev-wallet-1 => waltid/waltid-dev-wallet:stable | Entrypoint: [node server/index.mjs] | Cmd: []
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260724213108
+**********************

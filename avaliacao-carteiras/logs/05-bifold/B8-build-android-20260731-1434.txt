@@ -1,0 +1,30 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260731143454
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 3000
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é C:\IC-Wallets\logs\05-bifold\B8-build-android-20260731-1434.txt
+=== 0. AMBIENTE ===
+Node: v20.19.2 | JAVA_HOME: C:\Program Files\Microsoft\jdk-17.0.20.8-hotspot | ANDROID_HOME: C:\Users\breno\AppData\Local\Android\Sdk
+RAM livre antes do build:
+
+
+RAM_Livre_MB : 11538
+
+
+
+=== 1. BUILD ANDROID (cronometrado; log cru completo salvo a parte) ===
+Log cru sera salvo em: C:\IC-Wallets\logs\05-bifold\B8-build-android-RAW-20260731-1434.log

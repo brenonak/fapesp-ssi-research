@@ -1,0 +1,118 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260724162934
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 9120
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é .\00-baseline-20260724-1629.txt
+PS C:\IC-Wallets\logs\01-ambiente> Write-Host "=== EDICAO E VERSAO DO WINDOWS ==="
+Get-ComputerInfo -Property WindowsProductName, WindowsEditionId, OsVersion, OsBuildNumber | Format-List
+
+Write-Host "=== CPU E SUPORTE A VIRTUALIZACAO ==="
+Get-CimInstance Win32_Processor |
+  Select-Object Name, NumberOfCores, NumberOfLogicalProcessors,
+                VirtualizationFirmwareEnabled, SecondLevelAddressTranslationExtensions |
+  Format-List
+
+Write-Host "=== REQUISITOS HYPER-V (relatorio do systeminfo) ==="
+systeminfo | Select-String -Pattern "Hyper-V", "Hipervisor", "Virtualiza"
+
+Write-Host "=== ESTADO ATUAL DOS RECURSOS OPCIONAIS ==="
+Get-WindowsOptionalFeature -Online |
+  Where-Object { $_.FeatureName -match 'Hyper|Hypervisor|VirtualMachinePlatform|Linux|Containers' } |
+  Select-Object FeatureName, State | Format-Table -AutoSize
+
+Write-Host "=== MEMORIA - LINHA DE BASE (MB) ==="
+Get-CimInstance Win32_OperatingSystem |
+  Select-Object @{N='RAM_Total_MB';E={[math]::Round($_.TotalVisibleMemorySize/1KB,0)}},
+                @{N='RAM_Livre_MB';E={[math]::Round($_.FreePhysicalMemory/1KB,0)}} |
+  Format-List
+
+Write-Host "=== DISCO LIVRE (GB) ==="
+Get-PSDrive -PSProvider FileSystem |
+  Select-Object Name, @{N='Livre_GB';E={[math]::Round($_.Free/1GB,1)}} | Format-Table -AutoSize
+=== EDICAO E VERSAO DO WINDOWS ===
+
+
+WindowsProductName : Windows 10 Pro
+WindowsEditionId   : Professional
+OsVersion          : 10.0.26200
+OsBuildNumber      : 26200
+
+
+
+=== CPU E SUPORTE A VIRTUALIZACAO ===
+
+
+Name                                    : AMD Ryzen 5 8600G w/ Radeon 760M Graphics
+NumberOfCores                           : 6
+NumberOfLogicalProcessors               : 12
+VirtualizationFirmwareEnabled           : True
+SecondLevelAddressTranslationExtensions : False
+
+
+
+=== REQUISITOS HYPER-V (relatorio do systeminfo) ===
+
+Segurança baseada em virtualização:        Status: Executando
+                                                 Suporte para Virtualização de Base
+                                                 Suporte para Virtualização de Base
+Requisitos do Hyper-V:                     Hipervisor detectado. Recursos necessários para o Hyper-V não serão
+exibidos.
+=== ESTADO ATUAL DOS RECURSOS OPCIONAIS ===
+
+
+
+FeatureName                                State
+-----------                                -----
+VirtualMachinePlatform                   Enabled
+HypervisorPlatform                      Disabled
+Microsoft-Windows-Subsystem-Linux        Enabled
+Microsoft-Hyper-V-All                   Disabled
+Microsoft-Hyper-V                       Disabled
+Microsoft-Hyper-V-Tools-All             Disabled
+Microsoft-Hyper-V-Management-PowerShell Disabled
+Microsoft-Hyper-V-Hypervisor            Disabled
+Microsoft-Hyper-V-Services              Disabled
+Microsoft-Hyper-V-Management-Clients    Disabled
+Containers-DisposableClientVM           Disabled
+Containers-Server-For-Application-Guard Disabled
+HyperV-KernelInt-VirtualDevice          Disabled
+HyperV-Guest-KernelInt                  Disabled
+Containers                              Disabled
+Containers-HNS                          Disabled
+Containers-SDN                          Disabled
+
+
+=== MEMORIA - LINHA DE BASE (MB) ===
+
+
+RAM_Total_MB : 31915
+RAM_Livre_MB : 17652
+
+
+
+=== DISCO LIVRE (GB) ===
+
+Name Livre_GB
+---- --------
+C       649,4
+
+
+PS C:\IC-Wallets\logs\01-ambiente> Stop-Transcript
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260724163015
+**********************

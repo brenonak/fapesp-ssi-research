@@ -1,0 +1,107 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260731135740
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 3000
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é C:\IC-Wallets\logs\05-bifold\B7-yarn-install-20260731-1357.txt
+=== 0. CONFIRMACAO DE AMBIENTE ===
+Node: v20.19.2 | Pasta: C:\IC-Wallets\bifold-wallet\samples\app
+Corepack fornecera o yarn do projeto. Versao do yarn no projeto:
+node.exe : ! Corepack is about to download https://repo.yarnpkg.com/4.9.2/packages/yarnpkg-cli/bin/yarn.js
+No C:\IC-Wallets\node-v20.19.2-win-x64\yarn.ps1:16 caractere:5
++     & "$basedir/node$exe"  "$basedir/node_modules/corepack/dist/yarn. ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (! Corepack is a...cli/bin/yarn.js:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+node.exe : ! Corepack is about to download https://repo.yarnpkg.com/4.9.2/packages/yarnpkg-cli/bin/yarn.js
+No C:\IC-Wallets\node-v20.19.2-win-x64\yarn.ps1:16 caractere:5
++     & "$basedir/node$exe"  "$basedir/node_modules/corepack/dist/yarn. ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (! Corepack is a...cli/bin/yarn.js:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+? Do you want to continue? [Y/n]
+? Do you want to continue? [Y/n]
+4.9.2
+=== 1. RAM LIVRE ANTES DO INSTALL ===
+
+
+RAM_Livre_MB : 19921
+
+
+
+=== 2. YARN INSTALL (cronometrado; saida completa salva a parte) ===
+Ô×ñ YN0000: ┬À Yarn 4.9.2
+Ô×ñ YN0000: Ôöî Resolution step
+Ô×ñ YN0000: Ôöö Completed in 0s 239ms
+Ô×ñ YN0000: Ôöî Post-resolution validation
+Ô×ñ YN0060: Ôöé @credo-ts/core is listed by your project with version 0.6.3 (p4c07d), which doesn't satisfy what @credo-ts/push-notifications (via @bifold/core) and other dependencies request (but they have non-overlapping ranges!).
+Ô×ñ YN0060: Ôöé @credo-ts/core is listed by your project with version 0.6.3 (p74111), which doesn't satisfy what @credo-ts/push-notifications and other dependencies request (but they have non-overlapping ranges!).
+Ô×ñ YN0060: Ôöé @credo-ts/core is listed by your project with version 0.6.3 (pbdcee), which doesn't satisfy what @credo-ts/push-notifications and other dependencies request (but they have non-overlapping ranges!).
+Ô×ñ YN0060: Ôöé @openwallet-foundation/askar-shared is listed by your project with version 0.6.0 (p5984d), which doesn't satisfy what @credo-ts/askar requests (~0.4.3).
+Ô×ñ YN0060: Ôöé @openwallet-foundation/askar-shared is listed by your project with version 0.6.0 (pd1cb5), which doesn't satisfy what @credo-ts/askar requests (~0.4.3).
+Ô×ñ YN0060: Ôöé react is listed by your project with version 19.1.0 (p00bb9), which doesn't satisfy what @bifold/react-hooks requests (>=17.0.0 <19.0.0).
+Ô×ñ YN0060: Ôöé react is listed by your project with version 19.1.0 (p0c689), which doesn't satisfy what @bifold/react-hooks and other dependencies request (but they have non-overlapping ranges!).
+Ô×ñ YN0060: Ôöé react is listed by your project with version 19.1.0 (p5f002), which doesn't satisfy what @bifold/core and other dependencies request (but they have non-overlapping ranges!).
+Ô×ñ YN0060: Ôöé react is listed by your project with version 19.1.0 (pf0b56), which doesn't satisfy what @bifold/core and other dependencies request (but they have non-overlapping ranges!).
+Ô×ñ YN0060: Ôöé react-native-gifted-chat is listed by your project with version 2.4.1 (pbe728), which doesn't satisfy what @bifold/core requests (~3.3.2).
+Ô×ñ YN0060: Ôöé react-native-svg is listed by your project with version 15.12.1 (p2133e), which doesn't satisfy what react-native-qrcode-svg and other dependencies request (^13.2.0).
+Ô×ñ YN0060: Ôöé react-native-svg is listed by your project with version 15.12.1 (pbbb8d), which doesn't satisfy what react-native-qrcode-svg and other dependencies request (^13.2.0).
+Ô×ñ YN0060: Ôöé react-native-svg is listed by your project with version 15.12.1 (pe7219), which doesn't satisfy what react-native-qrcode-svg and other dependencies request (but they have non-overlapping ranges!).
+Ô×ñ YN0002: Ôöé @bifold/core@workspace:packages/core [9c96d] doesn't provide @hyperledger/anoncreds-shared (p373fd), requested by @credo-ts/anoncreds.
+Ô×ñ YN0002: Ôöé @bifold/core@workspace:packages/core doesn't provide @hyperledger/anoncreds-shared (pd3dd2), requested by @credo-ts/anoncreds.
+Ô×ñ YN0002: Ôöé @bifold/oca@workspace:packages/oca doesn't provide @hyperledger/anoncreds-shared (pa8ada), requested by @credo-ts/anoncreds.
+Ô×ñ YN0002: Ôöé @bifold/oca@workspace:packages/oca doesn't provide react (pae499), requested by @testing-library/jest-native.
+Ô×ñ YN0002: Ôöé @bifold/oca@workspace:packages/oca doesn't provide react-native (p5e1f5), requested by @testing-library/jest-native and other dependencies.
+Ô×ñ YN0002: Ôöé @bifold/oca@workspace:packages/oca doesn't provide react-test-renderer (p3658a), requested by @testing-library/jest-native.
+Ô×ñ YN0002: Ôöé @bifold/react-native-attestation@workspace:packages/react-native-attestation doesn't provide hermes-eslint (pa19b6), requested by eslint-plugin-ft-flow.
+Ô×ñ YN0002: Ôöé @bifold/remote-logs@workspace:packages/remote-logs doesn't provide class-transformer (p09a60), requested by @bifold/core.
+Ô×ñ YN0002: Ôöé @bifold/verifier@workspace:packages/verifier doesn't provide @credo-ts/question-answer (pd8ca9), requested by @bifold/react-hooks.
+Ô×ñ YN0002: Ôöé bifold-app@workspace:samples/app doesn't provide @credo-ts/didcomm (pa9e48), requested by @bifold/react-hooks.
+Ô×ñ YN0002: Ôöé bifold-app@workspace:samples/app doesn't provide @hyperledger/anoncreds-shared (p88d3e), requested by @credo-ts/anoncreds.
+Ô×ñ YN0002: Ôöé bifold-app@workspace:samples/app doesn't provide @hyperledger/indy-vdr-shared (pec470), requested by @credo-ts/indy-vdr.
+Ô×ñ YN0002: Ôöé bifold-app@workspace:samples/app doesn't provide @openwallet-foundation/askar-shared (p958bc), requested by @credo-ts/askar.
+Ô×ñ YN0002: Ôöé bifold-app@workspace:samples/app doesn't provide class-transformer (p7d616), requested by @bifold/core.
+Ô×ñ YN0002: Ôöé bifold-wallet-root@workspace:. doesn't provide @types/node (p486cf), requested by ts-node.
+Ô×ñ YN0086: Ôöé Some peer dependencies are incorrectly met by your project; run yarn explain peer-requirements <hash> for details, where <hash> is the six-letter p-prefixed code.
+Ô×ñ YN0086: Ôöé Some peer dependencies are incorrectly met by dependencies; run yarn explain peer-requirements for details.
+Ô×ñ YN0000: Ôöö Completed
+Ô×ñ YN0000: Ôöî Fetch step
+Ô×ñ YN0013: Ôöé 1680 packages were added to the project (+ 721.19 MiB).
+Ô×ñ YN0000: Ôöö Completed in 14s 624ms
+Ô×ñ YN0000: Ôöî Link step
+Ô×ñ YN0007: Ôöé @hyperledger/anoncreds-react-native@npm:0.3.4 [59641] must be built because it never has been before or the last one failed
+Ô×ñ YN0007: Ôöé @hyperledger/indy-vdr-react-native@patch:@hyperledger/indy-vdr-react-native@npm%3A0.2.4#~/.yarn/patches/@hyperledger-indy-vdr-react-native-npm-0.2.4-d7ed0b15da.patch::version=0.2.4&hash=076916 [59641] must be built because it never has been before or the last one failed
+Ô×ñ YN0007: Ôöé @openwallet-foundation/askar-react-native@npm:0.6.0 [59641] must be built because it never has been before or the last one failed
+Ô×ñ YN0007: Ôöé core-js@npm:2.6.12 must be built because it never has been before or the last one failed
+Ô×ñ YN0000: Ôöö Completed in 2m 41s
+Ô×ñ YN0000: ┬À Done with warnings in 2m 56s
+Tempo do yarn install (s): 180.4
+Exit code: 0
+Log cru completo salvo em: C:\IC-Wallets\logs\05-bifold\B7-yarn-install-RAW-20260731-1425.log
+=== 3. RESULTADO: node_modules foi criado? tamanho? ===
+node_modules existe. Subpastas (pacotes): 778
+=== 4. RAM LIVRE DEPOIS ===
+
+
+RAM_Livre_MB : 15341
+
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260731142858
+**********************

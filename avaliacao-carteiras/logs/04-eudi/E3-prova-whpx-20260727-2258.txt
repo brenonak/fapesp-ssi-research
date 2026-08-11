@@ -1,0 +1,60 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260727225851
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 38476
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é .\E3-prova-whpx-20260727-2258.txt
+=== 1. EMULADOR ESTA RODANDO? (adb deve listar 1 device) ===
+List of devices attached
+emulator-5554	device
+
+
+=== 2. IDENTIFICACAO DO DISPOSITIVO VIRTUAL ===
+Android release: 15
+API level:       35
+Modelo:          sdk_gphone64_x86_64
+Hardware:        ranchu
+
+=== 3. ACELERADOR EM USO (a prova do WHPX) ===
+--- Diagnostico de aceleracao do emulador ---
+accel:
+0
+WHPX(10.0.26200) is installed and usable.
+accel
+
+=== 4. AVD ATIVO E CONFIG ===
+Pixel_8
+
+=== 5. CONSUMO DE RECURSOS DO EMULADOR NO HOST ===
+
+Name                  Id RAM_MB CPU_s
+----                  -- ------ -----
+emulator           36744     12   0,1
+qemu-system-x86_64 14184   3736 440,6
+
+
+
+=== 6. RAM LIVRE DO HOST COM EMULADOR ATIVO (baseline zero: 17652 MB) ===
+
+
+RAM_Livre_MB : 12939
+
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260727225852
+**********************

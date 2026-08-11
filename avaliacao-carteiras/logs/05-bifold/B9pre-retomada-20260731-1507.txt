@@ -1,0 +1,56 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260731150748
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 18080
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é .\B9pre-retomada-20260731-1507.txt
+=== 1. REINJETAR NODE 20 ===
+v20.19.2
+=== 2. TOOLCHAIN PERSISTIU? ===
+JAVA_HOME: C:\Program Files\Microsoft\jdk-17.0.20.8-hotspot
+ANDROID_HOME: C:\Users\breno\AppData\Local\Android\Sdk
+java : openjdk version "17.0.20" 2026-07-21 LTS
+No linha:12 caractere:1
++ java -version 2>&1 | Select-Object -First 1
++ ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (openjdk version "17.0.20" 2026-07-21 LTS:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+=== 3. O TRABALHO PESADO SOBREVIVEU? ===
+--- node_modules do app (do yarn install) ---
+node_modules: True
+--- APK nativo ja compilado (do build de 12m34s) ---
+
+
+APK_MB        : 203,3
+LastWriteTime : 31/07/2026 14:47:23
+
+
+
+--- build/ dos workspaces (ainda deve estar AUSENTE - era o proximo passo) ---
+core            build/: ausente (esperado)
+react-hooks     build/: ausente (esperado)
+=== 4. RAM LIVRE ===
+
+
+RAM_Livre_MB : 23849
+
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260731150749
+**********************

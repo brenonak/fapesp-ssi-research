@@ -1,0 +1,73 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260731123025
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 33836
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é .\B2-toolchain-20260731-1230.txt
+=== 1. INSTALAR JDK 17 (Microsoft OpenJDK, via winget) ===
+Encontrado Microsoft Build of OpenJDK with Hotspot 17 [Microsoft.OpenJDK.17] Vers├úo 17.0.20.8
+Este aplicativo ├® licenciado para voc├¬ pelo propriet├írio.
+A Microsoft n├úo ├® respons├ível por, nem concede licen├ºas a pacotes de terceiros.
+Baixando https://aka.ms/download-jdk/microsoft-jdk-17.0.20-windows-x64.msi#winget
+Hash do instalador verificado com ├¬xito
+Iniciando a instala├º├úo do pacote...
+Instalado com ├¬xito
+Tempo instalacao JDK (s): 30.4
+=== 2. LOCALIZAR O JDK 17 INSTALADO ===
+JDK 17 encontrado em: C:\Program Files\Microsoft\jdk-17.0.20.8-hotspot
+=== 3. CONFIGURAR VARIAVEIS DE AMBIENTE (nivel usuario, reversivel) ===
+Adicionado ao PATH do usuario: C:\Users\breno\AppData\Local\Android\Sdk\platform-tools, C:\Program Files\Microsoft\jdk-17.0.20.8-hotspot\bin
+=== 4. INSTALAR YARN (via npm, global) ===
+
+added 1 package in 1s
+node.exe : npm notice
+No linha:1 caractere:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (npm notice:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+node.exe : npm notice
+No linha:1 caractere:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (npm notice:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+npm notice New major version of npm available! 10.9.3 -> 12.0.2
+npm notice New major version of npm available! 10.9.3 -> 12.0.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+npm notice To update run: npm install -g npm@12.0.2
+npm notice To update run: npm install -g npm@12.0.2
+npm notice
+npm notice
+Tempo instalacao Yarn (s): 1.8
+=== 5. VERIFICACAO (nesta sessao - JAVA_HOME ja aplicado) ===
+JAVA_HOME agora: C:\Program Files\Microsoft\jdk-17.0.20.8-hotspot
+java.exe : openjdk version "17.0.20" 2026-07-21 LTS
+No linha:47 caractere:17
++ if ($jdkPath) { & "$jdkPath\bin\java.exe" -version 2>&1 | Out-Host }
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (openjdk version "17.0.20" 2026-07-21 LTS:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+OpenJDK Runtime Environment Microsoft-14653939 (build 17.0.20+8-LTS)
+OpenJDK 64-Bit Server VM Microsoft-14653939 (build 17.0.20+8-LTS, mixed mode, sharing)
+ANDROID_HOME agora: C:\Users\breno\AppData\Local\Android\Sdk
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260731123058
+**********************

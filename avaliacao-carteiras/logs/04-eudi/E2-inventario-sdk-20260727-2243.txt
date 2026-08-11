@@ -1,0 +1,42 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260727224329
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 38476
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é .\E2-inventario-sdk-20260727-2243.txt
+=== 1. LOCALIZAR O ANDROID SDK ===
+SDK encontrado em: C:\Users\breno\AppData\Local\Android\Sdk
+
+=== 2. FERRAMENTAS PRESENTES (emulator, adb, sdkmanager, avdmanager) ===
+sdkmanager   AUSENTE - C:\Users\breno\AppData\Local\Android\Sdk\cmdline-tools\latest\bin\sdkmanager.bat
+emulator     OK - C:\Users\breno\AppData\Local\Android\Sdk\emulator\emulator.exe
+adb          OK - C:\Users\breno\AppData\Local\Android\Sdk\platform-tools\adb.exe
+avdmanager   AUSENTE - C:\Users\breno\AppData\Local\Android\Sdk\cmdline-tools\latest\bin\avdmanager.bat
+
+=== 3. IMAGENS DE SISTEMA E PLATAFORMAS INSTALADAS ===
+sdkmanager nao encontrado em cmdline-tools\latest. Listando pastas de system-images manualmente:
+Pasta system-images ainda nao existe - o Standard setup pode nao ter baixado imagem de emulador.
+
+=== 4. VERSAO DO EMULADOR ===
+Android emulator version 36.6.11.0 (build_id 15507667) (CL:N/A)
+Copyright (C) 2006-2024 The Android Open Source Project and many others.
+This program is a derivative of the QEMU CPU emulator (www.qemu.org).
+
+=== 5. AVDs JA EXISTENTES (esperado: nenhum ainda) ===
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260727224329
+**********************

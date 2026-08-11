@@ -1,0 +1,46 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260724175335
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 24896
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é .\B1d-modo-instalacao-20260724-1753.txt
+=== ONDE O EXECUTAVEL ESTA INSTALADO (per-user vs all-users) ===
+C:\Users\breno\AppData\Local\Programs\Docker\Docker\Docker Desktop.exe (nao)
+C:\Program Files\Docker\Docker\Docker Desktop.exe                 << EXISTE (all-users)
+=== CONFIG EM ProgramData (so existe em all-users) ===
+C:\ProgramData\Docker\config\settings-store.json                  (nao)
+C:\ProgramData\DockerDesktop\settings-store.json                  (nao)
+=== SERVICO com.docker.service (registrado em all-users) ===
+
+Name                Status StartType
+----                ------ ---------
+com.docker.service Stopped    Manual
+
+
+=== REGISTRO DE DESINSTALACAO: escopo da instalacao ===
+>> Encontrado em: ALL-USERS (HKLM)
+
+
+DisplayName     : Docker Desktop
+DisplayVersion  : 4.69.0
+InstallLocation : C:\Program Files\Docker\Docker
+
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260724175335
+**********************

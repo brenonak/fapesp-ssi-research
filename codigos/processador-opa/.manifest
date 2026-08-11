@@ -1,0 +1,1 @@
+{"revision":"","roots":[""],"wasm":[{"entrypoint":"vertiport/validation/allow","module":"/policy.wasm"}],"rego_version":1}

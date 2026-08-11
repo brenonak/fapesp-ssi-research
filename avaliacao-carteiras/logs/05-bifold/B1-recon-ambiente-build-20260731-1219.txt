@@ -1,0 +1,75 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260731121926
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 33836
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é .\B1-recon-ambiente-build-20260731-1219.txt
+=== 1. RAM LIVRE (baseline limpo antes do build) ===
+
+
+RAM_Livre_MB : 17638
+
+
+
+=== 2. NODE.JS ===
+node: v22.19.0
+npm:  10.9.3
+=== 3. YARN (gerenciador que a Bifold prefere) ===
+yarn: AUSENTE (instalaremos se necessario)
+=== 4. GIT ===
+git version 2.51.0.windows.1
+=== 5. JAVA / JDK (para Gradle/Android) ===
+java : java version "1.8.0_461"
+No linha:25 caractere:14
++ if ($java) { java -version 2>&1 | Out-Host } else { Write-Host "java: ...
++              ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (java version "1.8.0_461":String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+Java(TM) SE Runtime Environment (build 1.8.0_461-b11)
+Java HotSpot(TM) 64-Bit Server VM (build 25.461-b11, mixed mode)
+JAVA_HOME =
+=== 6. ANDROID SDK (ja instalado via Android Studio) ===
+SDK: C:\Users\breno\AppData\Local\Android\Sdk
+ANDROID_HOME =
+ANDROID_SDK_ROOT =
+--- Platform-tools (adb) e build-tools presentes? ---
+adb: True
+
+Name
+----
+36.0.0
+
+
+
+Name
+----
+android-36.1
+
+
+=== 7. WATCHMAN (opcional, ajuda no React Native) ===
+watchman: ausente (opcional)
+=== 8. ESPACO EM DISCO (build RN + node_modules = varios GB) ===
+
+
+Livre_GB : 636,5
+
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260731121927
+**********************

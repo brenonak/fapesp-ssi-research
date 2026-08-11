@@ -1,0 +1,129 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260731124714
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 12924
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é .\B3-validacao-clone-20260731-1247.txt
+=== 1. TOOLCHAIN NA SESSAO NOVA (agora sem caminho completo) ===
+--- java (deve ser 17, nao 8) ---
+java : openjdk version "17.0.20" 2026-07-21 LTS
+No linha:6 caractere:1
++ java -version 2>&1 | Out-Host
++ ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (openjdk version "17.0.20" 2026-07-21 LTS:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+OpenJDK Runtime Environment Microsoft-14653939 (build 17.0.20+8-LTS)
+OpenJDK 64-Bit Server VM Microsoft-14653939 (build 17.0.20+8-LTS, mixed mode, sharing)
+--- JAVA_HOME ---
+C:\Program Files\Microsoft\jdk-17.0.20.8-hotspot
+--- node / npm / yarn ---
+v22.19.0
+10.9.3
+1.22.22
+--- adb (via PATH agora) ---
+Android Debug Bridge version 1.0.41
+--- ANDROID_HOME ---
+C:\Users\breno\AppData\Local\Android\Sdk
+
+=== 2. CLONE DO REPOSITORIO BIFOLD (cronometrado) ===
+git : Cloning into 'bifold-wallet'...
+No linha:19 caractere:31
++ ... e-Command { git clone https://github.com/openwallet-foundation/bifold ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Cloning into 'bifold-wallet'...:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+Tempo de clone (s): 14.4
+
+=== 3. ESTRUTURA DO REPOSITORIO (topo) ===
+
+Name                   Tipo
+----                   ----
+.changeset             dir
+.github                dir
+.vscode                dir
+.yarn                  dir
+docs                   dir
+images                 dir
+noop                   dir
+packages               dir
+samples                dir
+scripts                dir
+.codecov.yml           arquivo
+.editorconfig          arquivo
+.gitattributes         arquivo
+.gitignore             arquivo
+.nvmrc                 arquivo
+.prettierignore        arquivo
+.prettierrc            arquivo
+.sonarcloud.properties arquivo
+.tool-versions         arquivo
+.yarnrc.yml            arquivo
+CHARTER.md             arquivo
+CODEOWNERS             arquivo
+CODE_OF_CONDUCT.md     arquivo
+CONTRIBUTING           arquivo
+eslint.config.mjs      arquivo
+LICENSE                arquivo
+MAINTAINERS.md         arquivo
+package.json           arquivo
+PATCH_NOTES.md         arquivo
+README.md              arquivo
+tsconfig-base.json     arquivo
+tsconfig.json          arquivo
+yarn.lock              arquivo
+
+
+=== 4. METADADOS DO PROJETO (package.json raiz) ===
+Nome: bifold-wallet-root
+Versao:
+Gerenciador de pacotes declarado: yarn@4.9.2
+--- Workspaces (monorepo?) ---
+  packages/*
+  samples/*
+--- Scripts disponiveis ---
+  clean                yarn workspaces foreach --all --topological-dev -p run clean && echo 'Cleaned all packages ðŸ§¹'
+  build                yarn workspaces foreach --all --topological-dev -p run build
+  test                 yarn workspaces foreach --all --topological-dev run test
+  test:watch           cd packages/core && yarn test:watch
+  coverage             yarn workspaces foreach --all --topological-dev run coverage
+  prettier             prettier --ignore-path .gitignore '**/*.+(js|jsx|json|ts|tsx|md|yml|yaml)'
+  lint                 eslint --color .
+  typecheck            yarn workspaces foreach --all --topological-dev -p run typecheck
+  release              yarn build && yarn changeset publish --no-git-tag
+  changeset-version    changeset version && yarn install --no-immutable
+  ledgers              ts-node ./scripts/refresh-ledgers.ts
+=== 5. INSTRUCOES DE BUILD DO PROJETO (achar README/docs de setup) ===
+
+FullName
+--------
+C:\IC-Wallets\bifold-wallet\.changeset\README.md
+C:\IC-Wallets\bifold-wallet\docs\components\readme.md
+C:\IC-Wallets\bifold-wallet\docs\design\readme.md
+C:\IC-Wallets\bifold-wallet\packages\oca\README.md
+C:\IC-Wallets\bifold-wallet\packages\react-hooks\README.md
+C:\IC-Wallets\bifold-wallet\packages\react-native-attestation\README.md
+C:\IC-Wallets\bifold-wallet\packages\remote-logs\README.md
+C:\IC-Wallets\bifold-wallet\packages\verifier\src\README.md
+C:\IC-Wallets\bifold-wallet\packages\verifier\README.md
+C:\IC-Wallets\bifold-wallet\README.md
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260731124729
+**********************

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>UATM Governance Panel</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #1e1e1e; color: white; padding: 20px; }
+        .container { max-width: 600px; margin: 0 auto; background: #2d2d2d; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        h1 { text-align: center; color: #00d2ff; }
+        
+        .group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; color: #aaa; }
+        input, select { width: 100%; padding: 10px; background: #444; border: 1px solid #555; color: white; border-radius: 5px; }
+        
+        button { width: 100%; padding: 15px; background: #0078d7; color: white; border: none; font-size: 16px; cursor: pointer; border-radius: 5px; margin-top: 10px; transition: 0.3s;}
+        button:hover { background: #005a9e; }
+
+        #resultado { margin-top: 20px; padding: 15px; text-align: center; font-weight: bold; display: none; border-radius: 5px;}
+        .aprovado { background: #198754; color: white; }
+        .negado { background: #dc3545; color: white; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Painel de Controle UATM</h1>
+        
+        <div class="group">
+            <label>Piloto (DID)</label>
+            <input type="text" id="pilotId" value="did:pilot:joao-silva" placeholder="Ex: did:pilot:joao">
+        </div>
+
+        <div class="group">
+            <label>Passageiro (CPF)</label>
+            <input type="text" id="passengerId" value="cpf:111.222.333-44">
+        </div>
+
+        <div class="group">
+            <label>Emissor da Credencial</label>
+            <select id="issuer">
+                <option value="did:web:anac.gov.br">ANAC (Válido)</option>
+                <option value="did:web:escola-pirata">Escola Pirata (Inválido)</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <label>Vento Atual (km/h)</label>
+            <input type="number" id="wind" value="10">
+        </div>
+
+        <div class="group">
+            <label>Aeronave</label>
+            <select id="model">
+                <option value="FutureFlyer-X1">FutureFlyer-X1 (Passageiro)</option>
+                <option value="TinyBee-S2">TinyBee-S2 (Leve)</option>
+            </select>
+        </div>
+
+        <button onclick="verificar()">SOLICITAR DECOLAGEM</button>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        async function verificar() {
+            // 1. Pega os dados da tela
+            const pilotId = document.getElementById('pilotId').value;
+            const passengerId = document.getElementById('passengerId').value;
+            const issuer = document.getElementById('issuer').value;
+            const wind = parseInt(document.getElementById('wind').value);
+            const model = document.getElementById('model').value;
+
+            // 2. Monta o JSON igualzinho fazíamos no app.js
+            const inputData = {
+                "operation_type": "flight",
+                "pilot": { 
+                    "id": pilotId,
+                    "certs": ["COMMERCIAL_PILOT", "NIGHT_FLIGHT", "URBAN_AIR_MOBILITY_V1"],
+                    "credential": {
+                        "issuer": issuer
+                    }
+                },
+                "passengers": [{ "id": passengerId }],
+                "aircraft": { "model": model },
+                "weather": { "wind_speed": wind, "visibility": 1000 }
+            };
+
+            // 3. Manda para o Backend
+            const resposta = await window.uatm.validarVoo(inputData);
+
+            // 4. Mostra o resultado
+            const div = document.getElementById('resultado');
+            div.style.display = 'block';
+            div.innerText = resposta.detalhes;
+            
+            if(resposta.aprovado) {
+                div.className = 'aprovado';
+                div.innerText = "✅ " + resposta.detalhes;
+            } else {
+                div.className = 'negado';
+                div.innerText = "❌ " + resposta.detalhes;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+{"automationLevel":{"allowed":["onboard pilot","remote pilot"],"error":"Nivel de automacao nao permitido para este vertiporto"},"battery_cycles":{"error":"Bateria excedeu o numero maximo de ciclos permitidos","max":1000},"weight":{"error":"Peso total excede a capacidade da plataforma de pouso","max":2500}}

@@ -1,0 +1,76 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260724182133
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 24896
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é .\B2b-diagnostico-falha-20260724-1821.txt
+=== 1. O ENGINE ESTA VIVO AGORA? ===
+Client: 29.4.0 | Server: 29.4.0
+=== 2. ESTADO ATUAL DE TODOS OS CONTEINERES (inclui parados) ===
+NAMES                       STATUS    PORTS
+docker-compose-caddy-1      Created
+docker-compose-postgres-1   Created
+=== 3. RAM E CPU CONFIGURADAS NA DockerDesktopVM ===
+
+
+Name             : DockerDesktopVM
+State            : Off
+RAM_Min_MB       : 512
+RAM_Max_MB       : 1048576
+RAM_Atribuida_MB : 0
+DynamicMemory    : False
+ProcessorCount   : 12
+
+
+
+=== 4. CONFIG DE RECURSOS DO DOCKER (.wslconfig nao se aplica; ver settings) ===
+{
+  "AutoStart": false,
+  "DisplayedOnboarding": true,
+  "EnableDockerAI": true,
+  "FilesharingDirectories": [
+    "C:\\IC-Wallets\\waltid-identity\\docker-compose\\Caddyfile"
+  ],
+  "IntegratedWslDistros": [
+    "Ubuntu"
+  ],
+  "LastContainerdSnapshotterEnable": 1776910731,
+  "LicenseTermsVersion": 2,
+  "SettingsVersion": 43,
+  "UseContainerdSnapshotter": true,
+  "WslEngineEnabled": false
+}
+=== 5. LOG DO ENGINE - ULTIMAS LINHAS (procurar OOM / crash) ===
+--- init.log (ultimas 15 linhas) ---
+{"component":"poweroff","level":"info","msg":"unmounted /run/mutagen-file-shares-mark","time":"2026-07-24T21:18:23.950781668Z"}
+{"component":"poweroff","level":"info","msg":"unmounted /run/mutagen-file-shares-mark","time":"2026-07-24T21:18:23.950846352Z"}
+{"component":"poweroff","level":"info","msg":"unmounted /run/mutagen-file-shares","time":"2026-07-24T21:18:23.950976480Z"}
+{"component":"poweroff","level":"info","msg":"unmounted /run/mutagen-file-shares","time":"2026-07-24T21:18:23.951090646Z"}
+{"component":"poweroff","level":"info","msg":"unmounted /","time":"2026-07-24T21:18:23.952055439Z"}
+{"component":"poweroff","level":"info","msg":"unmounted /","time":"2026-07-24T21:18:23.952085121Z"}
+{"level":"info","msg":"flushing logs","time":"2026-07-24T21:18:24.240075169Z"}
+{"component":"poweroff","level":"info","msg":"unmounted /var/lib","time":"2026-07-24T21:18:24.239965802Z"}
+{"component":"poweroff","level":"info","msg":"unmounted /var/lib","time":"2026-07-24T21:18:24.240036866Z"}
+{"component":"poweroff","level":"info","msg":"unmounted /","time":"2026-07-24T21:18:24.240047907Z"}
+{"component":"poweroff","level":"info","msg":"unmounted /","time":"2026-07-24T21:18:24.240053107Z"}
+{"component":"poweroff","level":"info","msg":"disks unmounted","time":"2026-07-24T21:18:24.240066938Z"}
+{"component":"poweroff","level":"info","msg":"flushing memlogd logs...","time":"2026-07-24T21:18:24.240071388Z"}
+{"component":"poweroff","level":"info","msg":"flushing memlogd logs succeeded","time":"2026-07-24T21:18:24.241071278Z"}
+{"component":"poweroff","level":"info","msg":"VM is ready to be powered off","time":"2026-07-24T21:18:24.241097860Z"}
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260724182133
+**********************

@@ -1,0 +1,82 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260727220042
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 38476
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é .\E1-preparacao-android-20260727-2200.txt
+=== 1. WHPX AINDA ATIVO? (pre-requisito para acelerar o emulador) ===
+
+FeatureName          State
+-----------          -----
+HypervisorPlatform Enabled
+
+
+=== 2. ESPACO EM DISCO (Android Studio + SDK + imagem = ~15 GB) ===
+
+
+Livre_GB : 639,5
+
+
+
+=== 3. WINGET DISPONIVEL? ===
+v1.29.280
+=== 4. JAVA/JDK JA PRESENTE? (Android Studio traz o seu proprio, mas registramos) ===
+java : java version "1.8.0_461"
+No linha:19 caractere:14
++ if ($java) { java -version 2>&1 } else { Write-Host "Java nao no PATH ...
++              ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (java version "1.8.0_461":String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+Java(TM) SE Runtime Environment (build 1.8.0_461-b11)
+Java HotSpot(TM) 64-Bit Server VM (build 25.461-b11, mixed mode)
+java : java version "1.8.0_461"
+No linha:19 caractere:14
++ if ($java) { java -version 2>&1 } else { Write-Host "Java nao no PATH ...
++              ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (java version "1.8.0_461":String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+Java(TM) SE Runtime Environment (build 1.8.0_461-b11)
+Java HotSpot(TM) 64-Bit Server VM (build 25.461-b11, mixed mode)
+=== 5. INSTALACAO VIA WINGET (se disponivel) ===
+Rodando: winget install Google.AndroidStudio
+Encontrado Android Studio [Google.AndroidStudio] Vers├úo 2026.1.2.10
+Este aplicativo ├® licenciado para voc├¬ pelo propriet├írio.
+A Microsoft n├úo ├® respons├ível por, nem concede licen├ºas a pacotes de terceiros.
+Contratos para Android Studio [Google.AndroidStudio] Vers├úo 2026.1.2.10
+Vers├úo: 2026.1.2.10
+Fornecedor: Google LLC
+URL do┬áFornecedor: https://developer.android.com/
+URL de Suporte┬ádo Fornecedor: https://developer.android.com/studio/intro
+P├ígina inicial: https://developer.android.com/studio
+Licen├ºa: Android Software Development Kit License Agreement
+URL da licen├ºa: https://developer.android.com/studio/terms
+URL de Privacidade: https://policies.google.com/privacy
+Copyright: Copyright ┬® 2000ÔÇô2024 Google
+Copyright URL: https://developer.android.com/studio/terms
+Acordos:
+  Android Software Development Kit License Agreement: https://developer.android.com/studio/terms
+
+Baixando https://edgedl.me.gvt1.com/android/studio/install/2026.1.2.10/android-studio-quail2-windows.exe
+Hash do instalador verificado com ├¬xito
+Iniciando a instala├º├úo do pacote...
+Instalado com ├¬xito
+Tempo de instalacao via winget (s): 219.9
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260727220423
+**********************

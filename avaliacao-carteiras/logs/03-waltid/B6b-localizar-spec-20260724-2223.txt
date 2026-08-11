@@ -1,0 +1,62 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260724222318
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 24604
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é .\B6b-localizar-spec-20260724-2223.txt
+
+=== PORTA 7001 : descobrir de onde o Swagger UI carrega a spec ===
+PS>TerminatingError(Invoke-WebRequest): "O servidor remoto retornou um erro: (404) Não Localizado."
+swagger-initializer.js nao acessivel: O servidor remoto retornou um erro: (404) Não Localizado.
+--- Testando caminhos alternativos ---
+http://localhost:7001/swagger                      (pagina Swagger UI)
+http://localhost:7001/api.json                     << SPEC JSON!
+>> TerminatingError(Invoke-WebRequest): "O servidor remoto retornou um erro: (404) Não Localizado."
+http://localhost:7001/documentation                HTTP 404
+>> TerminatingError(Invoke-WebRequest): "O servidor remoto retornou um erro: (404) Não Localizado."
+http://localhost:7001/openapi                      HTTP 404
+>> TerminatingError(Invoke-WebRequest): "'openapi.json' could not be found."
+http://localhost:7001/swagger/openapi.json         HTTP 404
+
+=== PORTA 7002 : descobrir de onde o Swagger UI carrega a spec ===
+PS>TerminatingError(Invoke-WebRequest): "O servidor remoto retornou um erro: (404) Não Localizado."
+swagger-initializer.js nao acessivel: O servidor remoto retornou um erro: (404) Não Localizado.
+--- Testando caminhos alternativos ---
+http://localhost:7002/swagger                      (pagina Swagger UI)
+http://localhost:7002/api.json                     << SPEC JSON!
+>> TerminatingError(Invoke-WebRequest): "O servidor remoto retornou um erro: (404) Não Localizado."
+http://localhost:7002/documentation                HTTP 404
+>> TerminatingError(Invoke-WebRequest): "O servidor remoto retornou um erro: (404) Não Localizado."
+http://localhost:7002/openapi                      HTTP 404
+>> TerminatingError(Invoke-WebRequest): "'openapi.json' could not be found."
+http://localhost:7002/swagger/openapi.json         HTTP 404
+
+=== PORTA 7003 : descobrir de onde o Swagger UI carrega a spec ===
+PS>TerminatingError(Invoke-WebRequest): "O servidor remoto retornou um erro: (404) Não Localizado."
+swagger-initializer.js nao acessivel: O servidor remoto retornou um erro: (404) Não Localizado.
+--- Testando caminhos alternativos ---
+http://localhost:7003/swagger                      (pagina Swagger UI)
+http://localhost:7003/api.json                     << SPEC JSON!
+>> TerminatingError(Invoke-WebRequest): "O servidor remoto retornou um erro: (404) Não Localizado."
+http://localhost:7003/documentation                HTTP 404
+>> TerminatingError(Invoke-WebRequest): "O servidor remoto retornou um erro: (404) Não Localizado."
+http://localhost:7003/openapi                      HTTP 404
+>> TerminatingError(Invoke-WebRequest): "'openapi.json' could not be found."
+http://localhost:7003/swagger/openapi.json         HTTP 404
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260724222319
+**********************

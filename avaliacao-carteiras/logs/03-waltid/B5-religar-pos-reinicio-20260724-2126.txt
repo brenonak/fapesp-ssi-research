@@ -1,0 +1,99 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260724212600
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 24604
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é C:\IC-Wallets\logs\03-waltid\B5-religar-pos-reinicio-20260724-2126.txt
+=== 1. ENGINE VIVO E BACKEND ATUAL ===
+Client 29.4.0 | Server 29.4.0
+
+  "WslEngineEnabled": true
+=== 2. ESTADO DOS CONTEINERES APOS REINICIO (podem estar Exited) ===
+NAME                                  STATUS
+docker-compose-caddy-1                Up 3 minutes
+docker-compose-issuer-api-1           Exited (255) 2 minutes ago
+docker-compose-issuer-api2-1          Exited (255) 2 minutes ago
+docker-compose-postgres-1             Up 3 minutes (healthy)
+docker-compose-vc-repo-1              Exited (255) 2 minutes ago
+docker-compose-verifier-api-1         Exited (255) 2 minutes ago
+docker-compose-verifier-api2-1        Exited (255) 2 minutes ago
+docker-compose-wallet-api-1           Exited (255) 2 minutes ago
+docker-compose-wallet-api2-1          Exited (255) 2 minutes ago
+docker-compose-waltid-demo-wallet-1   Exited (255) 2 minutes ago
+docker-compose-waltid-dev-wallet-1    Exited (255) 2 minutes ago
+docker-compose-web-portal-1           Exited (255) 2 minutes ago
+docker-compose-web-portal2-1          Exited (255) 2 minutes ago
+=== 3. SUBIR O STACK (cronometrado - imagens ja em cache) ===
+docker.exe :  Container docker-compose-caddy-1 Running
+No linha:15 caractere:3
++   & $docker compose up -d 2>&1 | Out-Host
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ( Container dock...addy-1 Running :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+ Container docker-compose-postgres-1 Running
+ Container docker-compose-verifier-api-1 Starting
+ Container docker-compose-web-portal-1 Starting
+ Container docker-compose-postgres-1 Waiting
+ Container docker-compose-issuer-api-1 Starting
+ Container docker-compose-issuer-api2-1 Starting
+ Container docker-compose-vc-repo-1 Starting
+ Container docker-compose-verifier-api2-1 Starting
+ Container docker-compose-postgres-1 Waiting
+ Container docker-compose-web-portal-1 Started
+ Container docker-compose-verifier-api-1 Started
+ Container docker-compose-vc-repo-1 Started
+ Container docker-compose-issuer-api2-1 Started
+ Container docker-compose-verifier-api2-1 Started
+ Container docker-compose-issuer-api-1 Started
+ Container docker-compose-postgres-1 Healthy
+ Container docker-compose-wallet-api2-1 Starting
+ Container docker-compose-postgres-1 Healthy
+ Container docker-compose-wallet-api-1 Starting
+ Container docker-compose-wallet-api2-1 Started
+ Container docker-compose-wallet-api-1 Started
+ Container docker-compose-waltid-demo-wallet-1 Starting
+ Container docker-compose-waltid-dev-wallet-1 Starting
+ Container docker-compose-waltid-demo-wallet-1 Started
+ Container docker-compose-web-portal2-1 Starting
+ Container docker-compose-waltid-dev-wallet-1 Started
+ Container docker-compose-web-portal2-1 Started
+Tempo para religar (s): 1.6
+=== 4. AGUARDAR ESTABILIZACAO (60s) ===
+=== 5. VEREDITO: ESTADO FINAL ===
+NAME                                  STATUS                   PORTS
+docker-compose-caddy-1                Up 4 minutes             0.0.0.0:7001-7006->7001-7006/tcp, [::]:7001-7006->7001-7006/tcp, 0.0.0.0:7101-7105->7101-7105/tcp, [::]:7101-7105->7101-7105/tcp, 0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+docker-compose-issuer-api-1           Up About a minute
+docker-compose-issuer-api2-1          Up About a minute
+docker-compose-postgres-1             Up 4 minutes (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+docker-compose-vc-repo-1              Up About a minute        3000/tcp
+docker-compose-verifier-api-1         Up About a minute
+docker-compose-verifier-api2-1        Up About a minute
+docker-compose-wallet-api-1           Up About a minute
+docker-compose-wallet-api2-1          Up About a minute
+docker-compose-waltid-demo-wallet-1   Up About a minute        7101/tcp
+docker-compose-waltid-dev-wallet-1    Up About a minute        7104/tcp
+docker-compose-web-portal-1           Up About a minute        7102/tcp
+docker-compose-web-portal2-1          Up About a minute        7105/tcp
+Conteineres ativos: 13 de 13
+=== 6. PROVA DE VIDA DAS APIS (7001/7002/7003) ===
+Porta 7001 : HTTP 200
+Porta 7002 : HTTP 200
+Porta 7003 : HTTP 200
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260724212703
+**********************

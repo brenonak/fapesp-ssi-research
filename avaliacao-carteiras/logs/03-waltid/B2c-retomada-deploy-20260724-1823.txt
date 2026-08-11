@@ -1,0 +1,91 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260724182344
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 24896
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é C:\IC-Wallets\logs\03-waltid\B2c-retomada-deploy-20260724-1823.txt
+=== 1. LIMPAR ESTADO PARCIAL (remove os containers em 'Created') ===
+docker.exe :  Container docker-compose-postgres-1 Stopping
+No linha:5 caractere:1
++ & "C:\Program Files\Docker\Docker\resources\bin\docker.exe" compose d ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ( Container dock...res-1 Stopping :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+ Container docker-compose-caddy-1 Stopping
+ Container docker-compose-caddy-1 Stopped
+ Container docker-compose-caddy-1 Removing
+ Container docker-compose-postgres-1 Stopped
+ Container docker-compose-postgres-1 Removing
+ Container docker-compose-caddy-1 Removed
+ Container docker-compose-postgres-1 Removed
+ Network docker-compose_default Removing
+ Network docker-compose_default Removed
+=== 2. SUBIR NOVAMENTE (cronometrado - imagens ja em cache, sem pull) ===
+docker.exe :  Network docker-compose_default Creating
+No linha:9 caractere:3
++   & "C:\Program Files\Docker\Docker\resources\bin\docker.exe" compose ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ( Network docker...fault Creating :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+ Network docker-compose_default Created
+ Container docker-compose-caddy-1 Creating
+ Container docker-compose-postgres-1 Creating
+ Container docker-compose-caddy-1 Created
+ Container docker-compose-web-portal-1 Creating
+ Container docker-compose-verifier-api2-1 Creating
+ Container docker-compose-issuer-api-1 Creating
+ Container docker-compose-verifier-api-1 Creating
+ Container docker-compose-vc-repo-1 Creating
+ Container docker-compose-issuer-api2-1 Creating
+ Container docker-compose-postgres-1 Created
+ Container docker-compose-wallet-api-1 Creating
+ Container docker-compose-wallet-api2-1 Creating
+ Container docker-compose-vc-repo-1 Created
+ Container docker-compose-web-portal-1 Created
+ Container docker-compose-wallet-api2-1 error during connect: Post
+"http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.54/containers/create?name=docker-compose-wallet-api2-1": EOF
+error during connect: Post
+"http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.54/containers/create?name=docker-compose-wallet-api2-1": EOF
+Tempo do compose up na retomada (s): 3.3
+=== 3. AGUARDAR ESTABILIZACAO (30s para health checks) ===
+=== 4. ESTADO DOS CONTEINERES (o veredito) ===
+NAME      STATUS    PORTS
+=== 5. CONTAGEM: quantos running vs total ===
+Conteineres ativos: 0
+=== 6. CONSUMO POR CONTEINER (snapshot) ===
+=== 7. RAM DA VM SOB CARGA REAL (comparar: repouso 2048/demanda 1658) ===
+
+
+Name             : DockerDesktopVM
+State            : Running
+RAM_Atribuida_MB : 2048
+RAM_Demanda_MB   : 0
+
+
+
+=== 8. RAM LIVRE DO HOST (baseline zero: 17652 MB) ===
+
+
+RAM_Livre_MB : 16527
+
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260724182425
+**********************

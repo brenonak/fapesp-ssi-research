@@ -1,0 +1,34 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260731133322
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 12924
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é .\B5-nvm-node20-20260731-1333.txt
+=== 1. INSTALAR NVM-WINDOWS (via winget) ===
+Encontrado NVM for Windows [CoreyButler.NVMforWindows] Vers├úo 1.2.2
+Este aplicativo ├® licenciado para voc├¬ pelo propriet├írio.
+A Microsoft n├úo ├® respons├ível por, nem concede licen├ºas a pacotes de terceiros.
+Baixando https://github.com/coreybutler/nvm-windows/releases/download/1.2.2/nvm-setup.exe
+Ocorreu um erro inesperado ao executar o comando:
+InternetOpenUrl() failed.
+0x80072f0d : unknown error
+Tempo instalacao nvm (s): 6.6
+=== 2. VERIFICAR SE O NVM FICOU DISPONIVEL NESTA SESSAO ===
+nvm ainda nao visivel nesta sessao - precisara reabrir o PowerShell (normal).
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260731133329
+**********************

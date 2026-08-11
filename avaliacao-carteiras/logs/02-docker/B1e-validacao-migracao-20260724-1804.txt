@@ -1,0 +1,84 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260724180403
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 24896
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é .\B1e-validacao-migracao-20260724-1804.txt
+=== 1. PROVA DO NOVO BACKEND: kernel NAO deve mais conter 'WSL2' ===
+
+ Server Version: 29.4.0
+ Kernel Version: 6.12.76-linuxkit
+ Operating System: Docker Desktop
+ Name: docker-desktop
+=== 2. PROVA NO HYPER-V: DockerDesktopVM deve aparecer agora ===
+
+
+
+Name              State RAM_MB CPU Uptime
+----              ----- ------ --- ------
+DockerDesktopVM Running   2048  12 00:00:39.7700000
+
+
+=== 3. SWITCH VIRTUAL USADO PELA VM DO DOCKER ===
+=== 4. TESTE FUNCIONAL: subir um container sob o novo backend ===
+docker.exe : Unable to find image 'hello-world:latest' locally
+No linha:21 caractere:3
++   & "C:\Program Files\Docker\Docker\resources\bin\docker.exe" run --r ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Unable to find ...latest' locally:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+latest: Pulling from library/hello-world
+4f55086f7dd0: Pulling fs layer
+4f55086f7dd0: Download complete
+4f55086f7dd0: Pull complete
+d5e71e642bf5: Download complete
+Digest: sha256:c3cbe1cc1aa588a64951ac6286e0df7b27fe2e6324b1001c619bb358770c0178
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+Tempo do hello-world (s): 6.3
+=== 5. RAM LIVRE SOB BACKEND HYPER-V (comparar: baseline 17652 MB) ===
+
+
+RAM_Livre_MB : 16491
+
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260724180410
+**********************

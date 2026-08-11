@@ -1,0 +1,98 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260731133430
+Nome de Usuário: BRENO\breno
+Executar como Usuário: BRENO\breno
+Nome da Configuração: 
+Computador: BRENO (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 47644
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é .\B5b-ativar-node20-20260731-1334.txt
+=== 1. NVM FUNCIONANDO NA SESSAO NOVA? ===
+nvm : O termo 'nvm' não é reconhecido como nome de cmdlet, função, arquivo de script ou programa operável. Verifique a 
+grafia do nome ou, se um caminho tiver sido incluído, veja se o caminho está correto e tente novamente.
+No linha:5 caractere:1
++ nvm version
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (nvm:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+nvm : O termo 'nvm' não é reconhecido como nome de cmdlet, função, arquivo de script ou programa operável. Verifique a
+grafia do nome ou, se um caminho tiver sido incluído, veja se o caminho está correto e tente novamente.
+No linha:5 caractere:1
++ nvm version
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (nvm:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+=== 2. VERSOES DE NODE QUE O NVM ENXERGA ===
+nvm : O termo 'nvm' não é reconhecido como nome de cmdlet, função, arquivo de script ou programa operável. Verifique a 
+grafia do nome ou, se um caminho tiver sido incluído, veja se o caminho está correto e tente novamente.
+No linha:8 caractere:1
++ nvm list
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (nvm:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+nvm : O termo 'nvm' não é reconhecido como nome de cmdlet, função, arquivo de script ou programa operável. Verifique a
+grafia do nome ou, se um caminho tiver sido incluído, veja se o caminho está correto e tente novamente.
+No linha:8 caractere:1
++ nvm list
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (nvm:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+=== 3. INSTALAR NODE 20.19.2 (versao exata do projeto) ===
+nvm : O termo 'nvm' não é reconhecido como nome de cmdlet, função, arquivo de script ou programa operável. Verifique a 
+grafia do nome ou, se um caminho tiver sido incluído, veja se o caminho está correto e tente novamente.
+No linha:11 caractere:24
++ $t = Measure-Command { nvm install 20.19.2 2>&1 | Out-Host }
++                        ~~~
+    + CategoryInfo          : ObjectNotFound: (nvm:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+nvm : O termo 'nvm' não é reconhecido como nome de cmdlet, função, arquivo de script ou programa operável. Verifique a
+grafia do nome ou, se um caminho tiver sido incluído, veja se o caminho está correto e tente novamente.
+No linha:11 caractere:24
++ $t = Measure-Command { nvm install 20.19.2 2>&1 | Out-Host }
++                        ~~~
+    + CategoryInfo          : ObjectNotFound: (nvm:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+Tempo (s): 0.1
+=== 4. ATIVAR NODE 20.19.2 ===
+nvm : O termo 'nvm' não é reconhecido como nome de cmdlet, função, arquivo de script ou programa operável. Verifique a 
+grafia do nome ou, se um caminho tiver sido incluído, veja se o caminho está correto e tente novamente.
+No linha:15 caractere:1
++ nvm use 20.19.2 2>&1 | Out-Host
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (nvm:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+nvm : O termo 'nvm' não é reconhecido como nome de cmdlet, função, arquivo de script ou programa operável. Verifique a
+grafia do nome ou, se um caminho tiver sido incluído, veja se o caminho está correto e tente novamente.
+No linha:15 caractere:1
++ nvm use 20.19.2 2>&1 | Out-Host
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (nvm:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+=== 5. CONFIRMAR VERSAO ATIVA (deve ser 20.19.2) ===
+v22.19.0
+10.9.3
+Onde o node esta apontando agora:
+
+
+Source : C:\Program Files\nodejs\node.exe
+
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260731133431
+**********************

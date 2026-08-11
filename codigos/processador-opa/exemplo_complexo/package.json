@@ -1,0 +1,35 @@
+{
+  "name": "uatm-governance",
+  "version": "1.0.0",
+  "description": "Sistema de Governança UATM com OPA", 
+  "author": "Breno", 
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "set ELECTRON_BUILDER_ALLOW_UNTRUSTED_SERVER_CERT=true && electron-builder"
+  },
+  "build": {
+    "appId": "com.uatm.governance",
+    "win": {
+      "target": "nsis"
+    },
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "policy.wasm",
+      "node_modules/**/*",
+      "package.json"
+    ]
+  },
+  "dependencies": {
+    "@open-policy-agent/opa-wasm": "^1.8.0"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0"
+  }
+}

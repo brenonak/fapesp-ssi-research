@@ -1,0 +1,17 @@
+{
+  "battery_cycles": {
+    "max": 1000,
+    "error": "Bateria velha demais"
+  },
+  "weight": {
+    "max": 2500,
+    "error": "Peso excedido"
+  },
+  "automationLevel": {
+    "allowed": [
+      "onboard pilot",
+      "remote pilot"
+    ],
+    "error": "Automacao proibida"
+  }
+}
